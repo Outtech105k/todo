@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "todo/version"
+require "todo/command"
+require "todo/version"
 
 module Todo
   class Error < StandardError; end
