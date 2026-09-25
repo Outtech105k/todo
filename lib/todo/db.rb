@@ -2,9 +2,7 @@ require 'fileutils'
 require 'active_record'
 
 module Todo
-
   module DB
-
     def self.prepare
       database_path = File.join(ENV['HOME'], '.todo', 'todo.sqlite3')
       connect_database database_path
@@ -13,7 +11,7 @@ module Todo
 
     # NOTE: connectとネーミングしてるが、実際は接続設定のみ。
     def self.connect_database(path)
-      spec = {adapter: 'sqlite3', database: path}
+      spec = { adapter: 'sqlite3', database: path }
       ActiveRecord::Base.establish_connection spec
     end
 
