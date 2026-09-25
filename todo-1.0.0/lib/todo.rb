@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+require 'todo/command'
+require 'todo/command/options'
+require 'todo/db'
+require 'todo/task'
+require 'todo/version'
+
+module Todo
+  class Error < StandardError; end
+  # Your code goes here...
+end
